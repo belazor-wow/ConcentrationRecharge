@@ -2,7 +2,7 @@
 ## Title: ConcentrationRecharge
 ## Notes: Displays |T5747318:14|t Concentration recharge status directly on profession spell icons and tooltips
 ## Version: @project-version@
-## IconTexture: 5747318
+## IconTexture: Interface\AddOns\ConcentrationRechargeDev\Icon.blp
 ## SavedVariables: ConcentrationRechargeDB, ConcentrationRechargeSettings
 ## Category-enUS: Professions
 ## Category-deDE: Berufe
