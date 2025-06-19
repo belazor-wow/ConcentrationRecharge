@@ -173,9 +173,7 @@ function ConcentrationRecharge:FormatConcentration(concentration)
 end
 
 function ConcentrationRecharge:AddRechargeToTooltip(tooltip, concentration)
-	tooltip:AddLine(
-		format("%s %s: %s", CreateSimpleTextureMarkup(5747318, 15, 15), PROFESSIONS_CRAFTING_STAT_CONCENTRATION, self:FormatConcentration(concentration))
-	)
+	tooltip:AddLine(format("%s %s: %s", CreateSimpleTextureMarkup(5747318, 15, 15), PROFESSIONS_CRAFTING_STAT_CONCENTRATION, self:FormatConcentration(concentration)))
 
 	local indent = CreateSimpleTextureMarkup(0, 15, 15) .. " "
 	if concentration:IsRecharging() then
