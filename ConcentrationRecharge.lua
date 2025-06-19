@@ -54,19 +54,13 @@ function ConcentrationCooldownMixin:OnLoad()
 	text:SetPoint("CENTER")
 	self.text = text
 
-	local alert = CreateFrame("Frame", nil, button, "ActionBarButtonSpellActivationAlert")
-	local w, h = button:GetSize()
-	alert:SetSize(w * 1.4, h * 1.4)
-	alert:SetPoint("CENTER", button, "CENTER", 0, 0)
-	alert:SetScript("OnShow", function(f)
-		f.ProcStartAnim:Play()
-	end)
+	local alert = CreateFrame("Frame", nil, button, "ActionBarButtonAssistedCombatHighlightTemplate")
+	alert:SetAllPoints(button)
 	alert:Hide()
 	self.alert = alert
 
 	self:SetScript("OnShow", self.OnShow)
 	self:SetScript("OnHide", self.OnHide)
-
 	button:HookScript("OnShow", function()
 		self:Show()
 	end)
@@ -97,12 +91,11 @@ function ConcentrationCooldownMixin:UpdateOverlayGlow()
 
 	if self.concentration:IsFull() and self.glowShown then
 		self.alert:Show()
-		self.alert.ProcStartAnim:Play()
+		self.alert.Flipbook.Anim:Play()
 	else
 		self.alert:Hide()
-		self.alert.ProcLoop:Stop()
-		if self.alert.ProcStartAnim:IsPlaying() then
-			self.alert.ProcStartAnim:Stop()
+		if self.alert.Flipbook.Anim:IsPlaying() then
+			self.alert.Flipbook.Anim:Stop()
 		end
 	end
 end
