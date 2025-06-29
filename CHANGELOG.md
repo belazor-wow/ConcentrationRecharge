@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.0 - 2025-06-29
+
+- Concentration cooldown can now be updated during crafting - With the toggle option in Settings
+- Fixed glow effects in Professions (K) page
+
 ## v2.0 - 2025-06-18
 
 - Upgraded the glow effect to the new Combat Assist style and fixed crash:
