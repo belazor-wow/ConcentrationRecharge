@@ -298,6 +298,14 @@ function ConcentrationRecharge:RegisterSettings()
 		default = true,
 	})
 
+	table.insert(settings, {
+		key = "enable_cooldown_update_during_craft",
+		type = "toggle",
+		title = L["settings_cooldown_update_during_craft_title"],
+		tooltip = L["settings_cooldown_update_during_craft_tooltip"],
+		default = true,
+	})
+
 	ns:RegisterSettings("ConcentrationRechargeSettings", settings)
 end
 
@@ -342,6 +350,14 @@ if _G["ConcentrationRecharge"] == nil then
 	end)
 
 	ConcentrationRecharge:RegisterEvent("TRADE_SKILL_CLOSE", function()
+		ConcentrationRecharge:Update()
+	end)
+
+	ConcentrationRecharge:RegisterEvent("TRADE_SKILL_ITEM_CRAFTED_RESULT", function(event, data)
+		if not ConcentrationRechargeSettings.enable_cooldown_update_during_craft or data == nil or data.concentrationSpent == 0 then
+			return
+		end
+
 		ConcentrationRecharge:Update()
 	end)
 
