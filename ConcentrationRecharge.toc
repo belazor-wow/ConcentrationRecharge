@@ -1,9 +1,11 @@
-## Interface: 110200
+## Interface: 120000
+## Version:  @project-version@
+
 ## Title: ConcentrationRecharge
+
 ## Notes: Displays |T5747318:14|t Concentration recharge status directly on profession spell icons and tooltips
-## Version: @project-version@
-## IconTexture: Interface\AddOns\ConcentrationRechargeDev\Icon.blp
-## SavedVariables: ConcentrationRechargeDB, ConcentrationRechargeSettings
+## Author: cybertk
+
 ## Category-enUS: Professions
 ## Category-deDE: Berufe
 ## Category-esES: Profesiones
@@ -15,11 +17,16 @@
 ## Category-ruRU: Профессии
 ## Category-zhCN: 专业
 ## Category-zhTW: 專業技能
+
+## SavedVariables: ConcentrationRechargeDB, ConcentrationRechargeSettings
+## IconTexture: Interface\AddOns\ConcentrationRechargeDev\Icon.blp
+
+## X-Flavor: retail
+## X-Expansion: MN
 ## X-Website: https://github.com/cybertk/ConcentrationRecharge
 ## X-Curse-Project-ID: 1242252
 ## X-Wago-ID: x61zgQK1
 ## X-WoWI-ID: 26923
-
 
 Embeds.xml
 Locales\Locales.xml
